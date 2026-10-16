@@ -2,6 +2,8 @@
 <html lang="zh-CN" data-theme="light">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://kzqgphxrghdclkwneqyn.supabase.co https://api.gitcode.com; frame-src https://player.bilibili.com; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; object-src 'none'" />
+    <meta name="referrer" content="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
@@ -15,20 +17,7 @@
     />
     <meta property="og:type" content="website" />
     <title>League Yunara｜英雄联盟桌面助手</title>
-    <script>
-      // 先落主题再画首屏，避免深色偏好用户看到一闪的浅色底
-      (function () {
-        try {
-          var saved = localStorage.getItem("yunara-site-theme");
-          var theme =
-            saved ||
-            (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-          document.documentElement.setAttribute("data-theme", theme);
-        } catch (e) {
-          /* 读不到就用 HTML 上的 light 默认值 */
-        }
-      })();
-    </script>
+    <script src="./theme.js"></script>
     <link rel="icon" href="./assets/logo.png" type="image/png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
