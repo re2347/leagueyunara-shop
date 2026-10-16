@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="League Yunara：英雄联盟桌面助手。换肤、战绩查询、自动操作、斗魂竞技场海斗助手与工具集，收进一个 Windows 客户端。"
+    />
+    <meta name="theme-color" content="#a83d94" />
+    <meta property="og:title" content="League Yunara｜英雄联盟桌面助手" />
+    <meta
+      property="og:description"
+      content="换肤、战绩、自动操作、海斗助手与工具集，收进一个 Windows 客户端。授权按天购买，官网直购自动发货。"
+    />
+    <meta property="og:type" content="website" />
+    <title>League Yunara｜英雄联盟桌面助手</title>
+    <script>
+      // 先落主题再画首屏，避免深色偏好用户看到一闪的浅色底
+      (function () {
+        try {
+          var saved = localStorage.getItem("yunara-site-theme");
+          var theme =
+            saved ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          /* 读不到就用 HTML 上的 light 默认值 */
+        }
+      })();
+    </script>
+    <link rel="icon" href="./assets/logo.png" type="image/png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#features">跳到主要内容</a>
+
+    <header class="header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top" aria-label="League Yunara 首页">
+          <img src="./assets/logo.png" alt="" width="28" height="28" />
+          <span>League Yunara</span>
+        </a>
+
+        <nav id="site-nav" class="nav" aria-label="主导航">
+          <a href="#features">功能</a>
+          <a href="#showcase">界面</a>
+          <a href="#pricing">授权</a>
+          <a href="#faq">问答</a>
+          <a href="#contact">联系</a>
+          <div class="nav-cta">
+            <a
+              class="btn btn-secondary"
+              href="https://re2347.github.io/leagueyunara-pay/"
+              aria-describedby="buy-backup"
+              >购买授权</a
+            >
+            <div class="tip" id="buy-backup" role="tooltip">
+              <span class="tip-label">备用购买链接</span>
+              <a
+                class="tip-link"
+                href="https://aceyun.cn/shop/4KVSS2PP/xh9ft7"
+                target="_blank"
+                rel="noopener noreferrer"
+                >aceyun.cn/shop/4KVSS2PP/xh9ft7</a
+              >
+            </div>
+          </div>
+        </nav>
+
+        <button
+          class="icon-btn theme-toggle"
+          type="button"
+          aria-label="切换深浅色"
+          aria-pressed="false"
+        >
+          <svg
+            class="theme-light"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+          <svg
+            class="theme-dark"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        </button>
+
+        <button
+          class="icon-btn menu-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="sr-only">打开菜单</span>
+          <span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="wrap">
+          <img class="hero-mark" src="./assets/logo.png" alt="League Yunara 图标" width="256" height="256" />
+          <p class="kicker">英雄联盟桌面助手 · Windows</p>
+          <h1 id="hero-title">换肤、战绩、自动操作，<br /><em>收进一个客户端。</em></h1>
+          <p class="lede">
+            悬浮窗跟着对局走，皮肤按需下载不占硬盘，自动规则配一次长期生效。
+            不打开网页端，不来回切窗口。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="https://re2347.github.io/leagueyunara-pay/">
+              立即开始
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+            </a>
+            <a
+              class="btn btn-secondary btn-lg"
+              href="https://wwboj.lanzouc.com/b01euq54ah"
+              data-lanzou-download
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              下载最新版
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" x2="12" y1="15" y2="3" /></svg>
+            </a>
+            <button class="btn btn-ghost btn-lg" type="button" id="backup-download">
+              备用下载
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
+            </button>
+          </div>
+          <!-- 版本号由 app.js 从 GitCode releases 读取；这里的值是 JS 失败时的兜底，不用每次发版都改 -->
+          <p class="hero-meta">
+            <span
+              ><span class="dot"></span>当前版本 <code id="release-tag">v0.7.6</code> ·
+              <span id="release-date">2026-10-11</span></span
+            >
+            <span>蓝奏云提取码 <code data-copy-password title="点击复制">c1le</code></span>
+            <span>Windows 10 / 11，仅 64 位</span>
+            <span>下载打不开？点「备用下载」进群取包</span>
+          </p>
+        </div>
+      </section>
+
+      <section id="features" class="section" aria-labelledby="features-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="kicker">它能做什么</p>
+            <h2 id="features-title">六个入口，<span>覆盖一整个对局流程。</span></h2>
+            <p>从进游戏前的查战绩，到选人阶段的秒选秒禁，再到结束后的点赞与领取。</p>
+          </div>
+
+          <div class="grid reveal-group">
+            <article class="card">
+              <div class="tile t-accent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" /></svg>
+              </div>
+              <h3>换肤</h3>
+              <p>在线皮肤库按需下载，不装完整皮肤包；也可以挂自己的本地皮肤。选英雄、挑皮肤、点应用，一步到位。</p>
+              <p class="fine">两条通道：本地客户端与 DLL 注入，自定义皮肤只走前者。</p>
+            </article>
+
+            <article class="card">
+              <div class="tile t-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" /></svg>
+              </div>
+              <h3>战绩与玩家分析</h3>
+              <p>查任意召唤师的近期对局、胜率、常用英雄与分路，标记你常遇到的人，胜负手一眼看出来。</p>
+              <p class="fine">腾讯区服跨大区可查，英雄数据窗可在选人阶段直接打开。</p>
+            </article>
+
+            <article class="card">
+              <div class="tile t-amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg>
+              </div>
+              <h3>自动操作</h3>
+              <p>选人阶段按预设自动秒选、秒禁，自动接受对局、结束自动点赞。规则配一次，之后每次对局都跟着走。</p>
+              <p class="fine">英雄配置可分路保存，误触前会显示当前生效的规则。</p>
+            </article>
+
+            <article class="card">
+              <div class="tile t-violet">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>
+              </div>
+              <h3>海斗助手</h3>
+              <p>斗魂竞技场专用：识别对手卡片，给出评级徽章，用独立悬浮窗显示，不占你的操作区。</p>
+              <p class="fine">需要游戏以无边框或窗口化运行才能取到画面。</p>
+            </article>
+
+            <article class="card">
+              <div class="tile t-emerald">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
+              </div>
+              <h3>工具集</h3>
+              <p>游戏内发送、房间工具、百宝箱、法球与奖励领取、战利品与好友清理，还有客户端窗口尺寸一类的修补。</p>
+              <p class="fine">按用途分页放着，用到再点，不常驻后台弹窗。</p>
+            </article>
+
+            <article class="card">
+              <div class="tile t-accent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="21" x2="14" y1="4" y2="4" /><line x1="10" x2="3" y1="4" y2="4" /><line x1="21" x2="12" y1="12" y2="12" /><line x1="8" x2="3" y1="12" y2="12" /><line x1="21" x2="16" y1="20" y2="20" /><line x1="12" x2="3" y1="20" y2="20" /><line x1="14" x2="14" y1="2" y2="6" /><line x1="8" x2="8" y1="10" y2="14" /><line x1="16" x2="16" y1="18" y2="22" /></svg>
+              </div>
+              <h3>主题与悬浮窗</h3>
+              <p>八套内置主题加自定义强调色，深浅色跟随系统。战绩、英雄数据、复活倒计时都是独立窗口，能单独开合。</p>
+              <p class="fine">不喜欢的窗口直接关掉，不会留一个托盘图标占着屏幕。</p>
+            </article>
+          </div>
+
+          <div class="notice reveal">
+            <div>
+              <h3>它是怎么工作的</h3>
+              <p>
+                数据来自英雄联盟客户端自带的 LCU 接口与官方数据源，不改技能数值、不修改内存里的战斗数据。
+                皮肤资源由本地引擎处理，安装包不打包完整皮肤库。
+              </p>
+            </div>
+            <div>
+              <h3>也请把风险一起看完</h3>
+              <ul>
+                <li>换肤需要向游戏目录写入一个注入模块，并重启游戏才会生效或失效；权限不足时要以管理员身份运行。</li>
+                <li>任何第三方工具都存在被反作弊或杀毒软件标记的可能，我们不承诺「一定安全」，请自行评估。</li>
+                <li>因使用本软件造成的账号处罚或数据损失，需要由使用者自己承担。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="showcase" class="section section-alt" aria-labelledby="showcase-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="kicker">界面长这样</p>
+            <h2 id="showcase-title">截图来自<span>正在运行的软件。</span></h2>
+            <p>左边导航六个入口，右侧内容区随选中的英雄、玩家和对局状态变化。</p>
+          </div>
+
+          <div class="shot-row reveal">
+            <div class="shot-copy">
+              <h3>皮肤库</h3>
+              <p>左侧选英雄，右侧挑皮肤。缓存状态、下载体积、当前生效的皮肤都在同一屏里，不用回到网页端翻。</p>
+            </div>
+            <figure class="shot">
+              <img src="./assets/shot-skin.webp" alt="League Yunara 换肤页：英雄列表与皮肤卡片" width="1280" height="688" loading="lazy" />
+            </figure>
+          </div>
+
+          <div class="shot-row flip reveal">
+            <div class="shot-copy">
+              <h3>战绩面板</h3>
+              <p>一名玩家的近期对局、胜率、常用英雄与分路分布，配上你自己的标记。查人这件事不需要开浏览器。</p>
+            </div>
+            <figure class="shot">
+              <img src="./assets/shot-stats.webp" alt="League Yunara 战绩页：对局列表与胜率统计" width="1280" height="688" loading="lazy" />
+            </figure>
+          </div>
+
+          <div class="shot-row reveal">
+            <div class="shot-copy">
+              <h3>自动操作</h3>
+              <p>自动接受对局、自动秒选秒禁、结束自动点赞，每一项都能单独开关并设置延时。规则一次配好，之后不用管。</p>
+            </div>
+            <figure class="shot">
+              <img src="./assets/shot-automation.webp" alt="League Yunara 自动操作页：对局流程与点赞开关" width="1280" height="688" loading="lazy" />
+            </figure>
+          </div>
+
+          <div class="video reveal" id="demo">
+            <iframe
+              title="League Yunara 功能演示"
+              src="https://player.bilibili.com/player.html?bvid=BV1d9h266Esj&amp;high_quality=1&amp;danmaku=0"
+              loading="lazy"
+              allow="fullscreen"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+          <div class="video-foot reveal">
+            <span>演示视频 · Bilibili</span>
+            <a href="https://www.bilibili.com/video/BV1d9h266Esj/" rel="noopener noreferrer"
+              >播放器加载不出来？在哔哩哔哩打开</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section" aria-labelledby="pricing-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="kicker">授权与价格</p>
+            <h2 id="pricing-title">按天买，<span>用多久付多久。</span></h2>
+            <p>
+              官网直购扫码付款，到账后自动核验发放激活码，不需要提交付款截图。
+              下面的价格是服务端实时下发的，调价后这里同步变。
+            </p>
+          </div>
+
+          <div class="plans reveal-group">
+            <article class="plan">
+              <span class="plan-tag">先试一天</span>
+              <p class="price">￥<b data-price="200">2</b><i>/ 1 天</i></p>
+              <p>装好之后先验证自己的机器能不能跑通，再决定要不要长期用。</p>
+              <span class="pill" data-stock="1">正在读取库存…</span>
+              <a class="btn btn-secondary" href="https://re2347.github.io/leagueyunara-pay/?plan=1">购买 1 天</a>
+            </article>
+
+            <article class="plan is-featured">
+              <span class="plan-tag">日常使用 · 推荐</span>
+              <p class="price">￥<b data-price="1000">10</b><i>/ 7 天</i></p>
+              <p>一周一张码，多数人的节奏。到期前续费即可，不需要重新配置。</p>
+              <span class="pill" data-stock="7">正在读取库存…</span>
+              <a class="btn btn-primary" href="https://re2347.github.io/leagueyunara-pay/?plan=7">购买 7 天</a>
+            </article>
+
+            <article class="plan">
+              <span class="plan-tag">整月更省心</span>
+              <p class="price">￥<b data-price="2000">20</b><i>/ 30 天</i></p>
+              <p>一个月一张码，适合每天都开的玩家。到期前续费即可，配置与皮肤缓存都还在。</p>
+              <span class="pill" data-stock="30">正在读取库存…</span>
+              <a class="btn btn-secondary" href="https://re2347.github.io/leagueyunara-pay/?plan=30">购买 30 天</a>
+            </article>
+          </div>
+
+          <div class="rules reveal">
+            <h3>买之前需要知道的规则</h3>
+            <dl>
+              <dt>设备绑定</dt>
+              <dd>一张激活码绑定一台设备。激活前想清楚装在哪台机器上。</dd>
+              <dt>需要联网</dt>
+              <dd>
+                授权租约 6 小时、离线宽限 24 小时。正常用着不会弹任何东西，但断网超过一天需要重新连一次。
+              </dd>
+              <dt>换电脑</dt>
+              <dd>
+                <a href="https://re2347.github.io/leagueyunara-pay/unbind.html">自助解绑</a>
+                释放旧设备，每张码每天限一次，北京时间 00:00 刷新。解绑不退款、不延长、不转移剩余天数。
+              </dd>
+              <dt>到期之后</dt>
+              <dd>到期只是不能再用软件，已下载的皮肤缓存不会被清掉，续费后直接接着用。</dd>
+            </dl>
+          </div>
+
+          <p class="foot-note reveal">
+            <span class="dot"></span>价格与库存由服务端实时下发；付款页 2 分钟内未支付会释放订单，请按页面显示的精确金额付款。
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" class="section section-alt" aria-labelledby="faq-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="kicker">常见问题</p>
+            <h2 id="faq-title">还有疑问，<span>这里应该有。</span></h2>
+            <p>没找到想问的，直接到交流群里问，把现象和日志一起发出来会快很多。</p>
+          </div>
+
+          <div class="faq reveal">
+            <details open>
+              <summary>会改游戏文件吗？<span aria-hidden="true">+</span></summary>
+              <p>
+                换肤会往游戏目录放一个注入模块，并在取消应用时把它删掉；生效和失效都需要重启游戏。
+                它不改你的账号数据，也不改技能数值。皮肤资源本身放在软件自己的数据目录里。
+              </p>
+            </details>
+            <details>
+              <summary>会不会被封号？<span aria-hidden="true">+</span></summary>
+              <p>
+                我们不承诺一定安全。软件走客户端自带的 LCU 接口与本地渲染，不做内存修改那类事，
+                但第三方工具始终有被反作弊标记的可能。请把它当作风险自负的使用，账号问题我们无法代为申诉。
+              </p>
+            </details>
+            <details>
+              <summary>为什么要联网？<span aria-hidden="true">+</span></summary>
+              <p>
+                授权是服务端验证的：租约 6 小时，离线宽限 24 小时，软件会在后台静默续期。
+                所以正常使用感觉不到它存在，但长时间断网后需要重新连一次网。
+              </p>
+            </details>
+            <details>
+              <summary>皮肤要自己准备吗？<span aria-hidden="true">+</span></summary>
+              <p>
+                不需要。皮肤库在线按需下载，只取你真正应用的那几个。
+                想用自己的皮肤包也可以，走「自定义皮肤」页签，仅本地客户端通道支持。
+              </p>
+            </details>
+            <details>
+              <summary>换电脑 / 重装系统怎么办？<span aria-hidden="true">+</span></summary>
+              <p>
+                先在<a href="https://re2347.github.io/leagueyunara-pay/unbind.html">自助解绑</a>释放旧设备，再在新机器上用同一张码激活。
+                每张码每天只能自助解绑一次；如果旧机器已经打不开软件了，加群走人工。
+              </p>
+            </details>
+            <details>
+              <summary>网吧能用吗？<span aria-hidden="true">+</span></summary>
+              <p>
+                可以用。换肤需要向游戏目录写入文件，遇到权限不足时以管理员身份运行软件即可。
+                带还原保护的机器重启后皮肤会回到原始状态，重新点一次「应用皮肤」就行。
+              </p>
+            </details>
+            <details>
+              <summary>支持哪些区服？<span aria-hidden="true">+</span></summary>
+              <p>
+                国服为主要使用场景，战绩查询支持腾讯区跨大区；外服按皮肤编号统一处理。
+                海斗助手需要游戏以无边框或窗口化运行。
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="wrap contact-grid">
+          <div class="contact-copy reveal">
+            <p class="kicker">交流与购买</p>
+            <h2 id="contact-title">找得到人，<span>也拿得到包。</span></h2>
+            <p>
+              下载打不开、付款没到账、换机要解绑，都可以直接找人。群里回得比邮箱快，
+              提问时请把软件版本、现象和日志一起发出来。
+            </p>
+            <a class="btn btn-primary" href="https://re2347.github.io/leagueyunara-pay/">去购买激活码</a>
+          </div>
+
+          <div class="contact-list reveal-group">
+            <div class="contact-row">
+              <span>QQ 交流群</span>
+              <strong id="qq-group">712178830</strong>
+              <button class="mini-btn" type="button" data-copy-qq>复制并打开 QQ</button>
+            </div>
+            <div class="contact-row">
+              <span>官网直购 · 自动发货</span>
+              <a class="mini-btn" href="https://re2347.github.io/leagueyunara-pay/">前往购买</a>
+            </div>
+            <div class="contact-row">
+              <span>备用购买链接</span>
+              <a
+                class="mini-btn mono"
+                href="https://aceyun.cn/shop/4KVSS2PP/xh9ft7"
+                target="_blank"
+                rel="noopener noreferrer"
+                >aceyun.cn/shop/4KVSS2PP/xh9ft7</a
+              >
+            </div>
+            <div class="contact-row">
+              <span>查订单 / 找回激活码</span>
+              <a class="mini-btn" href="https://re2347.github.io/leagueyunara-pay/query.html">打开查询页</a>
+            </div>
+            <div class="contact-row">
+              <span>抖音 · B站 · 微信 · 小红书</span>
+              <strong>Re2347</strong>
+            </div>
+            <div class="contact-row">
+              <span>闲鱼</span>
+              <strong>Submerged</strong>
+            </div>
+            <div class="contact-row">
+              <span>咨询 / 售后邮箱</span>
+              <a class="mini-btn" href="mailto:chenre2347@gmail.com">chenre2347@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-links">
+          <a href="https://re2347.github.io/leagueyunara-pay/">支付授权</a>
+          <a href="https://re2347.github.io/leagueyunara-pay/query.html">查订单</a>
+          <a href="https://re2347.github.io/leagueyunara-pay/unbind.html">自助解绑</a>
+          <a href="#pricing">授权规则</a>
+          <a href="#faq">常见问题</a>
+        </div>
+        <ol>
+          <li>
+            本软件未获得 Riot Games 的认可，也不代表 Riot Games 的观点或意见。League of Legends、Riot Games
+            及其相关资源均为 Riot Games, Inc. 的商标或注册商标。
+          </li>
+          <li>激活码与设备绑定，解绑不退款、不延长、不转移剩余天数；因使用本软件导致的账号处罚或数据损失由使用者承担。</li>
+          <li>交流群会定期清理长期不活跃的成员，通常不另行通知。</li>
+          <li>带还原保护的机器（常见于网吧）重启后皮肤映射会失效，重新点一次「应用皮肤」即可。</li>
+        </ol>
+        <div class="footer-bottom">
+          <span>© 2026 League Yunara</span>
+          <span>Windows 10 / 11 · 64 位</span>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
